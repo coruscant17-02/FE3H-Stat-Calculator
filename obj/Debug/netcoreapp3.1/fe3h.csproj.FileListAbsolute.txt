@@ -1,0 +1,11 @@
+C:\Users\baint\source\repos\fe3h\bin\Debug\netcoreapp3.1\fe3h.exe
+C:\Users\baint\source\repos\fe3h\bin\Debug\netcoreapp3.1\fe3h.deps.json
+C:\Users\baint\source\repos\fe3h\bin\Debug\netcoreapp3.1\fe3h.runtimeconfig.json
+C:\Users\baint\source\repos\fe3h\bin\Debug\netcoreapp3.1\fe3h.runtimeconfig.dev.json
+C:\Users\baint\source\repos\fe3h\bin\Debug\netcoreapp3.1\fe3h.dll
+C:\Users\baint\source\repos\fe3h\bin\Debug\netcoreapp3.1\fe3h.pdb
+C:\Users\baint\source\repos\fe3h\obj\Debug\netcoreapp3.1\fe3h.csprojAssemblyReference.cache
+C:\Users\baint\source\repos\fe3h\obj\Debug\netcoreapp3.1\fe3h.AssemblyInfoInputs.cache
+C:\Users\baint\source\repos\fe3h\obj\Debug\netcoreapp3.1\fe3h.AssemblyInfo.cs
+C:\Users\baint\source\repos\fe3h\obj\Debug\netcoreapp3.1\fe3h.dll
+C:\Users\baint\source\repos\fe3h\obj\Debug\netcoreapp3.1\fe3h.pdb
