@@ -6,7 +6,7 @@ namespace fe3h.Classes
 {
     public class ArmoredLord : Commoner
     {
-        ArmoredLord()
+        public ArmoredLord()
         {
             BaseHP = 38;
             BaseStr = 17;

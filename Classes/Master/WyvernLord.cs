@@ -6,7 +6,7 @@ namespace fe3h.Classes.Master
 {
     public class WyvernLord : Commoner
     {
-        WyvernLord()
+        public WyvernLord()
         {
             BaseHP = 32;
             BaseStr = 18;
