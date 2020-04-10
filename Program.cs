@@ -109,7 +109,71 @@ namespace fe3h
 
         static void Main(string[] args)
         {
-            
+            ChooseGroup();
+            //ChooseYouself();
+            //ChooseBlackEagles();
+            //ChooseBlueLions();
+            //ChooseGoldenDeers();
+            //ChooseChurchofSeiros();
+            //ChooseKnightsofSeiros();
+            //ChooseDlc();
         }
+
+        static void ChooseGroup()
+        {
+            Console.WriteLine("Please choose your character's group or youself(Avatar).");
+            Console.WriteLine("0:youself(Avatar)");
+            Console.WriteLine("1:Black Eagles");
+            Console.WriteLine("2:Blue Lions");
+            Console.WriteLine("3:Golden Deers");
+            Console.WriteLine("4:Church of Seiros");
+            Console.WriteLine("5:Knights of Seiros");
+            Console.WriteLine("6:DLC");
+
+            int groupId = ReadAndCheckNumber(0, 6);
+        }
+
+        static void ChooseYouself()
+        {
+            Console.WriteLine("Please choose your gender.");
+            Console.WriteLine("0:Male, 1:Female");
+
+            int genderId = ReadAndCheckNumber(0, 1);
+
+            // Choose Class
+
+            // Calcurate Growth
+        }
+
+        static int ReadAndCheckNumber(int firstNumber, int endNumber)
+        {
+            int targetNumber = 999;
+            bool isNumber;
+            isNumber = false;
+
+            while (false == isNumber)
+            {
+                string targetLine = Console.ReadLine();
+
+                if (true == int.TryParse(targetLine, out targetNumber))
+                {
+                    if(targetNumber >= firstNumber && targetNumber <= endNumber)
+                    {
+                        isNumber = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter correct number.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Please enter number.");
+                }
+            }
+
+            return targetNumber;
+        }
+
     }
 }

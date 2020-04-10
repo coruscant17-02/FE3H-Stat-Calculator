@@ -8,20 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\baint\\.nuget\\packages\\": {}
+    "C:\\Users\\sagyo_hideto\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\baint\\source\\repos\\fe3h\\fe3h.csproj",
+      "projectUniqueName": "C:\\Users\\sagyo_hideto\\Source\\Repos\\FE3H-Stat-Calculator\\fe3h.csproj",
       "projectName": "fe3h",
-      "projectPath": "C:\\Users\\baint\\source\\repos\\fe3h\\fe3h.csproj",
-      "packagesPath": "C:\\Users\\baint\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\baint\\source\\repos\\fe3h\\obj\\",
+      "projectPath": "C:\\Users\\sagyo_hideto\\Source\\Repos\\FE3H-Stat-Calculator\\fe3h.csproj",
+      "packagesPath": "C:\\Users\\sagyo_hideto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sagyo_hideto\\Source\\Repos\\FE3H-Stat-Calculator\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\baint\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\sagyo_hideto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -58,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
