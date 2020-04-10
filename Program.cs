@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using fe3h.Classes;
 using fe3h.Classes.DLC;
 using fe3h.Classes.Master;
@@ -107,8 +108,19 @@ namespace fe3h
         WyvernMaster wyvernMaster = new WyvernMaster();
         #endregion Classes
 
+        static List<string> characterGroupList;
+        static List<string> classCategoryList;
+        static List<string> begginerClassList;
+        static List<string> intermediateClassList;
+        static List<string> advancedClassList;
+        static List<string> masterClassList;
+        static List<string> uniqueClassList;
+        static List<string> dlcClassList;
+        static Dictionary<string, double> growthDictionary;
+
         static void Main(string[] args)
         {
+            SettingLists();
             ChooseGroup();
             //ChooseYouself();
             //ChooseBlackEagles();
@@ -119,18 +131,71 @@ namespace fe3h
             //ChooseDlc();
         }
 
+        static void SettingLists()
+        {
+            characterGroupList = new List<string>();
+            characterGroupList.Add("youself(Avatar)");
+            characterGroupList.Add("Black Eagles");
+            characterGroupList.Add("Blue Lions");
+            characterGroupList.Add("Golden Deers");
+            characterGroupList.Add("Church of Seiros");
+            characterGroupList.Add("Knights of Seiros");
+            characterGroupList.Add("DLC");
+
+            classCategoryList = new List<string>();
+            classCategoryList.Add("Begginer");
+            classCategoryList.Add("Intermediate");
+            classCategoryList.Add("Advanced");
+            classCategoryList.Add("Master");
+            classCategoryList.Add("Unique");
+            classCategoryList.Add("DLC");
+
+            begginerClassList = new List<string>();
+            begginerClassList.Add("Fighter");
+            begginerClassList.Add("Monk");
+            begginerClassList.Add("Myrmidon");
+            begginerClassList.Add("Soldier");
+
+            intermediateClassList = new List<string>();
+            intermediateClassList.Add("Archer");
+            intermediateClassList.Add("ArmoredKnight");
+            intermediateClassList.Add("Brawler");
+            intermediateClassList.Add("Brigand");
+            intermediateClassList.Add("Cavalier");
+            intermediateClassList.Add("DarkMage");
+            intermediateClassList.Add("Lord");
+            intermediateClassList.Add("Mage");
+            intermediateClassList.Add("Mercenary");
+            intermediateClassList.Add("PegasusKnight");
+            intermediateClassList.Add("Priest");
+            intermediateClassList.Add("Thief");
+
+            growthDictionary = new Dictionary<string, double>();
+            growthDictionary.Add("HP", 0.0);
+            growthDictionary.Add("Str", 0.0);
+            growthDictionary.Add("Mag", 0.0);
+            growthDictionary.Add("Dex", 0.0);
+            growthDictionary.Add("Spd", 0.0);
+            growthDictionary.Add("Lck", 0.0);
+            growthDictionary.Add("Def", 0.0);
+            growthDictionary.Add("Res", 0.0);
+            growthDictionary.Add("Cha", 0.0);
+        }
+
         static void ChooseGroup()
         {
             Console.WriteLine("Please choose your character's group or youself(Avatar).");
-            Console.WriteLine("0:youself(Avatar)");
-            Console.WriteLine("1:Black Eagles");
-            Console.WriteLine("2:Blue Lions");
-            Console.WriteLine("3:Golden Deers");
-            Console.WriteLine("4:Church of Seiros");
-            Console.WriteLine("5:Knights of Seiros");
-            Console.WriteLine("6:DLC");
+
+            ExtentionList(characterGroupList);
 
             int groupId = ReadAndCheckNumber(0, 6);
+
+            switch(groupId)
+            {
+                case 0:
+                    ChooseYouself();
+                    break;
+            }
         }
 
         static void ChooseYouself()
@@ -140,9 +205,204 @@ namespace fe3h
 
             int genderId = ReadAndCheckNumber(0, 1);
 
-            // Choose Class
+            Console.WriteLine("Please choose class category.");
+            ExtentionList(classCategoryList);
 
-            // Calcurate Growth
+            int classCategoryId = ReadAndCheckNumber(0, 5);
+
+            Console.WriteLine("Please choose class.");
+
+            Protagonist protagonist = new Protagonist();
+
+            switch ( classCategoryId ) {
+                case 0:
+                    ChooseBegginerClass(protagonist);
+
+                    break;
+
+                case 1:
+                    ChooseIntermediateClass(protagonist);
+                    break;
+
+            }
+        }
+
+        static void ChooseBegginerClass(Protagonist character)
+        {
+            ExtentionList(begginerClassList);
+
+            int classId = ReadAndCheckNumber(0, 3);
+
+            switch (classId)
+            {
+                case 0:
+
+                    Fighter fighter = new Fighter();
+
+                    CalcGrowth(character, fighter);
+
+                    break;
+
+                case 1:
+
+                    Monk monk = new Monk();
+
+                    CalcGrowth(character, monk);
+
+                    break;
+
+                case 2:
+
+                    Myrmidon myrmidon = new Myrmidon();
+
+                    CalcGrowth(character, myrmidon);
+
+                    break;
+
+                case 3:
+
+                    Soldier soldier = new Soldier();
+
+                    CalcGrowth(character, soldier);
+
+                    break;
+            }
+        }
+
+        static void ChooseIntermediateClass(Protagonist character)
+        {
+            ExtentionList(intermediateClassList);
+
+            int classId = ReadAndCheckNumber(0, 11);
+
+            switch (classId)
+            {
+                case 0:
+
+                    Archer archer = new Archer();
+
+                    CalcGrowth(character, archer);
+
+                    break;
+
+                case 1:
+
+                    ArmoredKnight armoredKnight = new ArmoredKnight();
+
+                    CalcGrowth(character, armoredKnight);
+
+                    break;
+
+                case 2:
+
+                    Brawler brawler = new Brawler();
+
+                    CalcGrowth(character, brawler);
+
+                    break;
+
+                case 3:
+
+                    Brigand brigand = new Brigand();
+
+                    CalcGrowth(character, brigand);
+
+                    break;
+
+                case 4:
+
+                    Cavalier cavalier = new Cavalier();
+
+                    CalcGrowth(character, cavalier);
+
+                    break;
+
+                case 5:
+
+                    DarkMage darkMage = new DarkMage();
+
+                    CalcGrowth(character, darkMage);
+
+                    break;
+
+                case 6:
+
+                    Lord lord = new Lord();
+
+                    CalcGrowth(character, lord);
+
+                    break;
+
+                case 7:
+
+                    Mage mage = new Mage();
+
+                    CalcGrowth(character, mage);
+
+                    break;
+
+                case 8:
+
+                    Mercenary mercenary = new Mercenary();
+
+                    CalcGrowth(character, mercenary);
+
+                    break;
+
+                case 9:
+
+                    PegasusKnight pegasusKnight = new PegasusKnight();
+
+                    CalcGrowth(character, pegasusKnight);
+
+                    break;
+
+                case 10:
+
+                    Priest priest = new Priest();
+
+                    CalcGrowth(character, priest);
+
+                    break;
+
+                case 11:
+
+                    Thief thief = new Thief();
+
+                    CalcGrowth(character, thief);
+
+                    break;
+
+            }
+        }
+
+        static void CalcGrowth(Protagonist character, Commoner characterClass)
+        {
+            Console.WriteLine("Growth");
+
+            growthDictionary["HP"] = character.HPGrowth + characterClass.HPGrowth;
+            growthDictionary["Str"] = character.StrGrowth + characterClass.StrGrowth;
+            growthDictionary["Mag"] = character.MagGrowth + characterClass.MagGrowth;
+            growthDictionary["Dex"] = character.DexGrowth + characterClass.DexGrowth;
+            growthDictionary["Spd"] = character.SpdGrowth + characterClass.SpdGrowth;
+            growthDictionary["Lck"] = character.LckGrowth + characterClass.LckGrowth;
+            growthDictionary["Def"] = character.DefGrowth + characterClass.DefGrowth;
+            growthDictionary["Res"] = character.ResGrowth + characterClass.ResGrowth;
+            growthDictionary["Cha"] = character.ChaGrowth + characterClass.ChaGrowth;
+
+            foreach (KeyValuePair<string, double> growth in growthDictionary)
+            {
+                Console.WriteLine(growth.Key + ":" + Math.Round(growth.Value * 100, 1) + "%");
+
+            }
+        }
+
+        static void ExtentionList(List<string> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(i + ":" + list[i]);
+            }
         }
 
         static int ReadAndCheckNumber(int firstNumber, int endNumber)
