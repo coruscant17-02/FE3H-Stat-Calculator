@@ -122,13 +122,6 @@ namespace fe3h
         {
             SettingLists();
             ChooseGroup();
-            //ChooseYouself();
-            //ChooseBlackEagles();
-            //ChooseBlueLions();
-            //ChooseGoldenDeers();
-            //ChooseChurchofSeiros();
-            //ChooseKnightsofSeiros();
-            //ChooseDlc();
         }
 
         static void SettingLists()
@@ -240,6 +233,13 @@ namespace fe3h
                 case 0:
                     ChooseYouself();
                     break;
+
+                    //ChooseBlackEagles();
+                    //ChooseBlueLions();
+                    //ChooseGoldenDeers();
+                    //ChooseChurchofSeiros();
+                    //ChooseKnightsofSeiros();
+                    //ChooseDlc();
             }
         }
 
@@ -269,6 +269,9 @@ namespace fe3h
                     ChooseIntermediateClass(protagonist);
                     break;
 
+                case 2:
+                    ChooseAdvancedClass(protagonist);
+                    break;
             }
         }
 
@@ -418,6 +421,112 @@ namespace fe3h
 
                     break;
 
+            }
+        }
+
+        static void ChooseAdvancedClass(Protagonist character)
+        {
+            ExtentionList(advancedClassList);
+
+            int classId = ReadAndCheckNumber(0, 11);
+
+            switch (classId)
+            {
+                case 0:
+
+                    Assassin assassin = new Assassin();
+
+                    CalcGrowth(character, assassin);
+
+                    break;
+
+                case 1:
+
+                    Bishop bishop = new Bishop();
+
+                    CalcGrowth(character, bishop);
+
+                    break;
+
+                case 2:
+
+                    DarkBishop darkBishop = new DarkBishop();
+
+                    CalcGrowth(character, darkBishop);
+
+                    break;
+
+                case 3:
+
+                    FortressKnight fortressKnight = new FortressKnight();
+
+                    CalcGrowth(character, fortressKnight);
+
+                    break;
+
+                case 4:
+
+                    Grappler grappler = new Grappler();
+
+                    CalcGrowth(character, grappler);
+
+                    break;
+
+                case 5:
+
+                    Hero hero = new Hero();
+
+                    CalcGrowth(character, hero);
+
+                    break;
+
+                case 6:
+
+                    Paladin paladin = new Paladin();
+
+                    CalcGrowth(character, paladin);
+
+                    break;
+
+                case 7:
+
+                    Sniper sniper = new Sniper();
+
+                    CalcGrowth(character, sniper);
+
+                    break;
+
+                case 8:
+
+                    Swordmaster swordmaster = new Swordmaster();
+
+                    CalcGrowth(character, swordmaster);
+
+                    break;
+
+                case 9:
+
+                    Warlock warlock = new Warlock();
+
+                    CalcGrowth(character, warlock);
+
+                    break;
+
+                case 10:
+
+                    Warrior warrior = new Warrior();
+
+                    CalcGrowth(character, warrior);
+
+                    break;
+
+                case 11:
+
+                    WyvernRider wyvernRider = new WyvernRider();
+
+                    CalcGrowth(character, wyvernRider);
+
+                    break;
             }
         }
 
