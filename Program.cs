@@ -170,6 +170,51 @@ namespace fe3h
             intermediateClassList.Add("Priest");
             intermediateClassList.Add("Thief");
 
+            advancedClassList = new List<string>();
+            advancedClassList.Add("Assassin");
+            advancedClassList.Add("Bishop");
+            advancedClassList.Add("DarkBishop");
+            advancedClassList.Add("FortressKnight");
+            advancedClassList.Add("Grappler");
+            advancedClassList.Add("Hero");
+            advancedClassList.Add("Paladin");
+            advancedClassList.Add("Sniper");
+            advancedClassList.Add("Swordmaster");
+            advancedClassList.Add("Warlock");
+            advancedClassList.Add("Warrior");
+            advancedClassList.Add("WyvernRider");
+
+            masterClassList = new List<string>();
+            masterClassList.Add("BowKnight");
+            masterClassList.Add("DarkKnight");
+            masterClassList.Add("FalconKnight");
+            masterClassList.Add("GreatKnight");
+            masterClassList.Add("Gremory");
+            masterClassList.Add("HolyKnight");
+            masterClassList.Add("MortalSavant");
+            masterClassList.Add("WarMaster");
+            masterClassList.Add("WyvernLord");
+
+            uniqueClassList = new List<string>();
+            uniqueClassList.Add("ArmoredLord");
+            uniqueClassList.Add("Barbarossa");
+            uniqueClassList.Add("Commoner");
+            uniqueClassList.Add("Dancer");
+            uniqueClassList.Add("DeathKnight");
+            uniqueClassList.Add("Emperor");
+            uniqueClassList.Add("EnemyDeathKnight");
+            uniqueClassList.Add("EnlightenedOne");
+            uniqueClassList.Add("GreatLord");
+            uniqueClassList.Add("HighLord");
+            uniqueClassList.Add("Noble");
+            uniqueClassList.Add("WyvernMaster");
+
+            dlcClassList = new List<string>();
+            dlcClassList.Add("DarkFlier");
+            dlcClassList.Add("Trickster");
+            dlcClassList.Add("Valkyrie");
+            dlcClassList.Add("WarMonkCleric");
+
             growthDictionary = new Dictionary<string, double>();
             growthDictionary.Add("HP", 0.0);
             growthDictionary.Add("Str", 0.0);
